@@ -87,4 +87,5 @@ node_modules
 # User define
 #
 tmp/*
+_config.yml
 
