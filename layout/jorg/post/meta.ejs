@@ -1,0 +1,15 @@
+<%
+	var wpm = Math.ceil(post.content.split(" ").length / 300)
+%>
+<span class="post-meta">
+      <time datetime="<%= date_xml(post.date) %>">
+          <%= date(post.date, null) %>
+      </time>
+    | <%- wpm %> minute read
+    <% if (post.tags && post.tags.length){ %>
+    <% count = post.tags.length %>
+    | <% post.tags.forEach(function(tag, index) { %>
+    <a href='<%= config.root + tag.path %>'><%= tag.name %></a><% if (count !== index+1) { %>,<% } %>
+    <% }); %>
+    <% } %>
+</span>

@@ -1,0 +1,169 @@
+html
+	font-size 0.8em
+
+h1
+	font-size font-size-h1
+
+h2
+	font-size font-size-h2
+
+h3 
+	font-size font-size-h3
+
+h4 
+	font-size font-size-h4
+
+h4 
+	font-size font-size-h5
+
+h4 
+	font-size font-size-h6
+
+h1, h2, h3, h4, h5, h6
+	font-family font-headers
+	color color-headers
+	padding 0.7em 0px 0.2em 0px
+	letter-spacing 0.05em
+	a
+		text-decoration none
+		color color-headers
+
+a 
+	text-decoration none
+	color color-link
+	&:hover
+		text-decoration underline
+
+p
+	letter-spacing 0.03em
+	line-height 1.2em
+	padding 0.5em 0
+
+em
+	font-style italic
+
+hr
+	border 0
+	height 1px
+	background-color color-highlight1
+
+strong
+	font-weight bold
+
+mark
+	background-color color-highlight2
+
+blockquote
+	padding 1em 2em
+	margin 1em 2em
+	font-style italic
+	border-left 5px solid color-highlight2
+	cite
+		font-size 0.7em
+		padding-top 2em
+		display block
+		color color-highlight2
+		&:before
+			content "\2014 \2009";
+
+ol 
+	li
+		list-style-type decimal
+
+ul 
+	li 
+		list-style-type disc
+		
+li
+	list-style-position outside
+
+ul, ol
+	margin-left 0
+	padding 0.5em 0 0.5em 1.5em
+	ul, ol
+		margin-left: 0.7em 
+		padding-left: 0.7em
+
+img
+	max-width 100%
+	display table
+	//margin: 0 auto
+
+code, tt
+	padding 1px 3px
+	font-family font-code
+	font-size 0.85em
+	white-space pre-wrap
+	border 1px solid #E3EDF3
+	background #F7FAFB
+	border-radius 2px
+
+pre
+	-moz-box-sizing border-box
+	box-sizing border-box
+	margin 1.6em 0
+	border 1px solid #E3EDF3
+	width 100%
+	padding 10px
+	font-family font-code
+	font-size 0.9em
+	white-space pre
+	overflow auto
+	background #F7FAFB
+	border-radius 3px
+
+pre code, tt
+	font-size inherit
+	white-space -moz-pre-wrap
+	white-space pre-wrap
+	background transparent
+	border none
+	padding 0
+
+table
+	-moz-box-sizing border-box
+	box-sizing border-box
+	margin 1.6em 0
+	width 100%
+	max-width 100%
+	background-color transparent
+	th
+		color #000
+	tbody
+    	& + tbody
+      		border-top 2px solid #efefef
+	table
+		table
+  			background-color #fff
+
+table th,
+table td
+	padding 8px
+	line-height 20px
+	text-align left
+	vertical-align top
+	border-top 1px solid #efefef
+
+table caption + thead tr:first-child th,
+table caption + thead tr:first-child td,
+table colgroup + thead tr:first-child th,
+table colgroup + thead tr:first-child td,
+table thead:first-child tr:first-child th,
+table thead:first-child tr:first-child td
+	border-top 0
+
+table tbody > tr:nth-child(even) > td,
+table tbody > tr:nth-child(even) > th
+	background-color #fcfcfc
+
+table thead 
+	tr
+		border: 1px solid color-highlight2
+	th
+		background-color color-highlight1
+
+::-moz-selection
+	background-color color-title
+::selection
+	background-color color-title
+	color white

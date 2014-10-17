@@ -1,0 +1,41 @@
+vendor(prop, args)
+	-webkit-{prop} args
+	-moz-{prop} args
+	{prop} args
+
+border-radius()
+	vendor('border-radius', arguments)
+
+resize(n, p)
+	n * p
+
+// random number between min and max
+random(a,b)
+	return math(math(0, 'random')*(b - a + 1) + a, 'floor')
+
+randomJorgHead()
+	return 'jorghead'+random(1,3)+'.png'
+	
+randomJorg()
+	return 'jorg'+random(1,3)+'.png'
+
+round()
+	border-radius(50%)
+
+center()
+	margin 0 auto
+
+gray()
+	-webkit-filter: grayscale(1); -webkit-filter: grayscale(100%); -moz-filter: grayscale(100%)
+	filter: gray
+	filter: url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' height='0'><filter id='greyscale'><feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0' /></filter></svg>#greyscale")
+
+notgray()
+	-webkit-filter: grayscale(0); -webkit-filter: grayscale(0%); -moz-filter: grayscale(0%)
+	filter: none
+	filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 1 0\'/></filter></svg>#grayscale")
+    
+ie8background(n)
+	background-image none !important
+	filter unquote("progid:DXImageTransform.Microsoft.AlphaImageLoader( src="+n+", sizingMethod=scale)")
+	-ms-filter unquote("progid:DXImageTransform.Microsoft.AlphaImageLoader( src="+n+", sizingMethod=scale)")

@@ -1,0 +1,35 @@
+<%
+	var categories = list_categories({style:'list',show_count:false,class:"menu-categorie"});
+	var pageObject = site.pages._store.list();
+	var pages = '<ul class="menu-page-list">';
+	pages += '<li class="menu-page-list-item"><a class="menu-pages-list-link" href="/">Home</a>';
+	for (var key in pageObject) {
+	   	var obj = pageObject[key];
+	  	pages += '<li class="menu-page-list-item"><a class="menu-pages-list-link" href="/'+obj.path+'">'+obj.title+'</a>'
+	}
+	pages += '</ul>'
+
+	function toggle(elem, cls) {
+		if(elem.className === cls) {
+			elem.className = ''
+		} else {
+			elem.className = cls
+		}
+	}
+%>
+<script><%- toggle.toString() %></script>
+<div id="menu">
+	<div id="menu-navicon" onclick="toggle(document.getElementById('menu-content'), 'hide');toggle(document.getElementById('menu'), 'show');">
+		&#9776;
+	</div>
+	<div id="menu-content" class="hide">
+		<div id="menu-content-pages">
+			<h2>Pages</h2>
+			<%- pages %>
+		</div>
+		<div id="menu-content-categories">
+			<h2>Categories</h2>
+			<%- categories %>
+		</div>
+	</div>
+</div>

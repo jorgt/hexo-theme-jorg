@@ -1,0 +1,44 @@
+// these styles are used with straight-up highlightjs styles
+@import '_highlightjs/_tomorrow_eighties'
+
+pre
+	overflow hidden !important //trying not want to touch .hljs class
+	font-family "Source Code Pro", Monaco, Menlo, Consolas, monospace
+	font-size 0.85em
+	line-height 1.2em
+	padding 0.75em !important
+	code
+		.caption
+			font-size 0.8em
+			padding-bottom 10px
+			a
+				float right
+
+		//adding some pazzazz to otherwise unused elements
+		.hljs-emphasis
+			font-style italic
+		.hljs-strong
+			font-weight bold
+		.hljs-bullet
+			opacity 0.7
+
+		ol,li
+			margin 0
+			padding 0
+
+		ol
+			counter-reset foo
+			display table
+
+		li
+			list-style none
+			counter-increment foo
+			display table-row
+
+		li::before
+			content counter(foo) "."
+			display table-cell
+			text-align right
+			padding-right 1em
+			opacity 0.4
+			font-size 0.85em

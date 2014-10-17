@@ -1,0 +1,102 @@
+/*
+	responsiveness!
+*/
+
+// Sections. This goes with the responsiveness
+.container
+	center()
+	max-width 768px
+
+//tablets
+@media screen and (max-width: 1024px)
+	.content
+		padding 0em 1em
+	h1, h2
+		padding-top 0.7em
+		padding-bottom 0.3em
+	h1
+		font-size font-size-h1 * size-tablet
+	h2
+		font-size font-size-h2 * size-tablet
+	.post
+		margin-top 0em
+	header
+		.logo-gutter
+			margin-top m = 80px
+			margin-bottom m
+		.page-title
+			font-size font-size-title * size-tablet
+		.logo
+			height header-logo-size * size-tablet
+			width header-logo-size * size-tablet
+			background-size header-logo-size * size-tablet header-logo-size * size-tablet
+
+	html:not(.oldie)
+		.share
+			a
+				notgray()
+
+	#menu
+		h2 
+			font-size = 0.4em
+
+	#menu-navicon
+			text-align center
+			background-color color-background
+
+//phones
+@media screen and (max-width: 768px)
+	html
+		font-size 0.6em
+	.content
+		padding 0em 1em
+	header 
+		.logo-gutter
+			margin-top m = 60px
+			margin-bottom m
+		.page-title
+			font-size font-size-title * size-phone
+		.logo
+			height header-logo-size * size-phone
+			width header-logo-size * size-phone
+			background-size header-logo-size * size-phone header-logo-size * size-phone
+	.post-footer
+		.author
+			margin-right 120px
+		.share
+			width 120px
+	.site-footer
+		height 60px
+
+	html:not(.oldie)
+		.share
+			a
+				notgray()
+
+	#menu
+		h2 
+			font-size = 0.4em
+
+@media screen and (max-width: 768px) and (orientation: landscape)
+	header 
+		.logo-gutter
+			margin-top m = 30px
+			margin-bottom m
+
+	#menu
+		h2 
+			font-size = 0.4em
+
+@media screen and (max-width: 768px) and (orientation: portrait)
+	header
+		.page-title
+			padding-right 0
+		.logo-gutter
+			position relative
+			left -15px
+	.site-footer
+		height 60px
+
+	#menu
+		h2 
+			font-size = 0.4em

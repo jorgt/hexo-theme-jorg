@@ -1,0 +1,13 @@
+# config
+cover: //blog.ghost.org/content/images/2013/Nov/cover.png
+logo: //blog.ghost.org/content/images/2013/Nov/bloglogo_1-1.png
+bio: 'Developer. Likes coding. Codes SAP by day, JS by night.'
+
+# Content
+excerpt_link: Read More →
+
+# Google
+google_analytics: UA-55534832-1
+
+# Miscellaneous
+rss:

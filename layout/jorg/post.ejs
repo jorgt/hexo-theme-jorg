@@ -1,0 +1,25 @@
+
+<% permalink = config.url + config.root + post.path %>
+<main class="content" role="main">
+  <div class="container">
+  <article class="post post-main">
+    <h1 class="post-title"><%- post.title %></h1>
+    <%- partial('post/meta') %>
+    <section class="post-content">
+      <% if (post.excerpt){ %>
+        <div class="post-excerpt">
+          <%- post.excerpt.replace('<br>', '') %>
+        </div>
+        <%- post.content.replace(/(.*)<a id="more"><\/a>/i, '') %>
+      <% } else { %>
+        <%- post.content %>
+      <% } %>
+    </section>
+    <footer class="post-footer">
+      <%- partial('post/author') %>
+      <%- partial('post/share') %>
+    </footer>
+  </article>
+  <%- partial('post/comments') %>
+  </div>
+</main>

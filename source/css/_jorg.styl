@@ -1,0 +1,171 @@
+body 
+	background-color color-background
+	font font-size font-body
+	color color-font
+
+.highlight1
+	background-color color-highlight1
+
+.highlight2
+	background-color color-highlight2
+
+.post 
+	margin-top 2em
+	padding-top 0.5em
+	padding-bottom 0.5em
+	.post-title
+		font-weight bold
+
+	.excerpt-link
+		padding-top 1em
+		display block
+
+.post-meta
+	font-size font-size-meta
+	font-family font-headers
+	color color-highlight2
+	font-style italic
+	display block
+	padding-top 1em
+	padding-bottom 1em
+	a
+		text-decoration none
+		color color-title
+
+.post-main
+	.post-excerpt
+		font-size font-size * 1.1
+		font-style italic
+		padding 1em 0
+
+img 
+	margin 1em 0
+
+.img-gutter
+	width 100%
+	padding 0.5em
+	margin 0.5em 0
+	img
+		margin 0 auto
+
+header 
+	a:hover
+		text-decoration none
+	.logo-gutter
+		position relative
+		//width 530px
+		text-align center
+		center()
+		margin-top m = 100px
+		margin-bottom m
+	.logo, .page-title
+		margin 0
+		padding 0
+		display inline-block
+	.logo
+		background-image url('/img/'+randomJorgHead())
+		background-size header-logo-size header-logo-size
+		height header-logo-size
+		width header-logo-size
+		background-repeat: no-repeat;
+		position relative
+		top 0.3em
+		//float: left
+		round()
+		center()
+	.page-title
+		font font-size-title font-title
+		color color-title
+		letter-spacing 0
+		//width 100%
+		padding-right 0.3em
+	h1
+		padding-bottom 0
+
+.site-footer
+	display block
+	center()
+	font-family font-headers
+	font-size font-size-footer
+	color color-highlight2
+	text-align center
+	height 100px
+	background-color color-highlight1
+	width 100%
+	display: inline-flex;
+	margin-top 2em
+	border-top 1px solid color-highlight2
+	vertical-align: middle;
+	.container
+		display inline-block
+		margin auto auto
+		width 100%
+
+.post-footer
+	position relative
+	display block
+	padding 4em 0 1em 0 
+	margin 4em 0 1em 0 
+	font-size font-size-footer
+	border-top 1px solid color-highlight1
+
+	.author
+		margin-right 160px
+
+	.share
+		position absolute
+		top 4em
+		right 0px
+		width 160px
+		text-align center
+
+		a
+			display inline-block
+			width 3em
+			height 3em
+			background-size 3em 3em
+		.icon-facebook
+			background-image url('/img/social/FaceBook.png')
+		.icon-google-plus
+			background-image url('/img/social/Google.png')
+		.icon-twitter
+			background-image url('/img/social/Twitter.png')
+
+//when NOT ie7-9 do the whole greying in / out on hover
+html:not(.oldie)
+	.share
+		a
+			gray()
+			&:hover
+				notgray()
+
+//otherwise the icons need to be put in using filter techniques
+html.oldie
+	.icon-facebook
+		ie8background('/img/social/FaceBook.png')
+	.icon-google-plus
+		ie8background('/img/social/Google.png')	
+	.icon-twitter
+		ie8background('/img/social/Twitter.png')
+			
+
+.pagination
+	padding-top 2em
+	a
+		border 1px solid color-highlight1
+		height 2em
+		padding 5px 10px
+		border-radius(20px)
+		font-family font-headers
+	a:hover
+		text-decoration none
+		background-color color-highlight1
+	.page-number
+		center()
+	.newer-posts
+		float left
+	.older-posts
+		float right
+
+.hidden
+	display none
