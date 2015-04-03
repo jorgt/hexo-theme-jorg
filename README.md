@@ -12,3 +12,5 @@ excerpt_link: Read More →
 # Google
 google_analytics: xxx
 ```
+
+Note to self. Also check the hexo standard higlighter... it was modified. It'll need some more work before it's ready for the public.

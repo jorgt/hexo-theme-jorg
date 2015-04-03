@@ -1,5 +1,8 @@
 <%
 	var categories = list_categories({style:'list',show_count:false,class:"menu-categorie"});
+	//var tags = list_tags({style:'list',show_count:false,class:"menu-tags"});
+	tags = tag_cloud({unit: 'em', amount: 5, min_font: 1, max_font: 1, orderby: 'length', order: -1});
+	tags = tags.replace(/style=\"font-size: 1.00em;\"/gi, '')
 	var pageObject = site.pages._store.list();
 	var pages = '<ul class="menu-page-list">';
 	pages += '<li class="menu-page-list-item"><a class="menu-pages-list-link" href="/">Home</a>';
@@ -30,6 +33,10 @@
 		<div id="menu-content-categories">
 			<h2>Categories</h2>
 			<%- categories %>
+		</div>
+		<div id="menu-content-tags">
+			<h2>Top 5 Tags</h2>
+			<%- tags %>
 		</div>
 	</div>
 </div>

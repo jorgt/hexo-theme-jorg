@@ -3,9 +3,6 @@
 */
 
 // Sections. This goes with the responsiveness
-.container
-	center()
-	max-width 768px
 
 //tablets
 @media screen and (max-width: 1024px)
@@ -32,17 +29,20 @@
 			background-size header-logo-size * size-tablet header-logo-size * size-tablet
 
 	html:not(.oldie)
-		.share
-			a
+		.icon
 				notgray()
 
 	#menu
 		h2 
-			font-size = 0.4em
+			font-size 0.7em
 
 	#menu-navicon
 			text-align center
 			background-color color-background
+			margin 0.3em
+
+	#jorgie
+		display none
 
 //phones
 @media screen and (max-width: 768px)
@@ -75,7 +75,10 @@
 
 	#menu
 		h2 
-			font-size = 0.4em
+			font-size 0.7em
+
+		#menu-content-tags
+			display none
 
 @media screen and (max-width: 768px) and (orientation: landscape)
 	header 
@@ -85,7 +88,7 @@
 
 	#menu
 		h2 
-			font-size = 0.4em
+			font-size = 0.6em
 
 @media screen and (max-width: 768px) and (orientation: portrait)
 	header
@@ -99,4 +102,4 @@
 
 	#menu
 		h2 
-			font-size = 0.4em
+			font-size = 0.6em

@@ -2,27 +2,36 @@
 	position fixed
 	top d = 0
 	left d
+	z-index 9999999
 	h2
 		font-size 1em
 	ul
-		font-size 0.8em
+		padding 0
 		li
 			list-style-type none
 	div 
 		float left
+	a	
+		font-size 0.8em
+
 	#menu-navicon
 		font-family mono-space
 		font-size 2em
-		padding 0.3em
-		margin 0.3em
+		padding 0.5em
+		//margin 0.3em
 		cursor pointer
 	#menu-content
 		opacity 1
 		padding 0.3em
 		float left
 		div
-			float left
 			margin-left 2em
+		#menu-content-tags
+			h2
+				padding-bottom 0.5em
+			a 
+				display block
+
 	.hide
 		display none
 		position absolute

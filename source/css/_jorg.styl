@@ -2,6 +2,10 @@ body
 	background-color color-background
 	font font-size font-body
 	color color-font
+	
+.container
+	center()
+	max-width 768px
 
 .highlight1
 	background-color color-highlight1
@@ -40,6 +44,15 @@ body
 
 img 
 	margin 1em 0
+
+.left
+	float left
+
+.right
+	float right
+
+.content, .site-footer, .post-footer, .post-content
+	clearfix()
 
 .img-gutter
 	width 100%
@@ -119,49 +132,84 @@ header
 		width 160px
 		text-align center
 
-		a
-			display inline-block
-			width 3em
-			height 3em
-			background-size 3em 3em
-		.icon-facebook
-			background-image url('/img/social/FaceBook.png')
-		.icon-google-plus
-			background-image url('/img/social/Google.png')
-		.icon-twitter
-			background-image url('/img/social/Twitter.png')
+.icon
+	display inline-block
+	width 3em
+	height 3em
+	background-size 3em 3em
+	background-repeat no-repeat
+	color: color-font
+
+.facebook
+	background-image url('/img/social/FaceBook.png')
+.google-plus
+	background-image url('/img/social/Google.png')
+.twitter
+	background-image url('/img/social/Twitter.png')
+.github
+	background-image url('/img/social/Github.png')
+.email
+	background-image url('/img/social/Email.png')
+.linkedin
+	background-image url('/img/social/LinkedIn.png')
+
+.in-touch
+	.icon
+		vertical-align middle
+		line-height h = 2.2em
+		height: h
+		background-size 2em 2em
+	a
+		padding-left: 2.5em
+		width 10em
+		&:hover
+			text-decoration none
+			color color-title
 
 //when NOT ie7-9 do the whole greying in / out on hover
 html:not(.oldie)
-	.share
-		a
+	.icon
 			gray()
 			&:hover
 				notgray()
 
 //otherwise the icons need to be put in using filter techniques
 html.oldie
-	.icon-facebook
+	.facebook
 		ie8background('/img/social/FaceBook.png')
-	.icon-google-plus
+	.google-plus
 		ie8background('/img/social/Google.png')	
-	.icon-twitter
+	.twitter
 		ie8background('/img/social/Twitter.png')
+	.github
+		ie8background('/img/social/Github.png')
+	.email
+		ie8background('/img/social/Email.png')
+	.linkedin
+		ie8background('/img/social/LinkedIn.png')
 			
 
 .pagination
 	padding-top 2em
+	center()
+	text-align center
+	span
+		display inline-block
+		height 2em
+		margin 0
+		height 100%
+		vertical-align middle
+		font-family font-headers
 	a
 		border 1px solid color-highlight1
-		height 2em
-		padding 5px 10px
 		border-radius(20px)
-		font-family font-headers
+		padding 5px 10px
 	a:hover
 		text-decoration none
-		background-color color-highlight1
+		border 1px solid color-title
 	.page-number
-		center()
+		height 2em
+		padding 5px 10px
 	.newer-posts
 		float left
 	.older-posts

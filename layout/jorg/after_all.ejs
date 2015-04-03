@@ -5,6 +5,14 @@
       $pre[i].className += 'hljs';
     }
   }
+
+  var $logo = document.querySelectorAll(".logo")[0];
+  $logo.style.backgroundImage = 'url("/img/jorghead'+(Math.floor(Math.random() * 3) + 1)+'.png")';
+
+  var $jorg = document.querySelector('#jorgie');
+  if($jorg) {
+    $jorg.src = '/img/jorg'+(Math.floor(Math.random() * 3) + 1)+'.png';
+  }
 </script>
 <% if (theme.google_analytics) { %>
 <script type="text/javascript">
